@@ -1,0 +1,240 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+	font-family: Orbitron;
+	src: url(../webfonts/Orbitron-Regular.eot);
+	src: url(../webfonts/Orbitron-Regular.woff) format("woff");
+}
+
+body {
+	font-family: Orbitron, sans-serif;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #535353;
+  font-weight: 700;
+}
+
+.wrapper {
+  position: relative;
+  height: 100vh;
+  background-image: url('./img/bg_morning.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.gnb {
+  padding: 40px;
+}
+
+.gnb-nav {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.gnb-list {
+  display: flex;
+  position: absolute;
+  right: 200px;
+}
+
+.gnb-list li {
+  margin-right: 50px;
+}
+
+.main-wrapper {
+  display: flex;
+}
+
+.main-txt-box {
+  position: absolute;
+  z-index: 2;
+  top: 35%;
+  left: 8%;
+}
+
+.mt1 {
+  display: inline;
+  font-size: 55px;
+  font-weight: 600;
+  color: #2c2c2c;
+}
+
+.mt2 {
+  display: inline;
+  font-size: 55px;
+  color: rgb(102, 102, 102);
+  margin-left: 14px;
+}
+
+.main-txt {
+  color: #535353;
+}
+
+.main-content-wrapper {
+  overflow: hidden;
+  position: absolute;
+  right: 0px;
+  bottom: 100px;
+  width: 1150px;
+  height: 700px;
+  background-image: url('./img/phone_morning.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 250px 100px;
+  z-index: 2;
+}
+
+#clock-box {
+  width: 600px;
+  font-size: 65px;
+  position: absolute;
+  right: 120px;
+  top: 300px;
+  opacity: .8;
+  z-index: 2;
+}
+
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 100px;
+  z-index: 3;
+}
+
+.btn-wrapper button {
+  width: 400px;
+  height: 40px;
+  border: none;
+  background-color: #fff;
+  margin: 0 5px;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: Orbitron;
+  opacity: .7;
+}
+
+.mb.on,
+.ab.on,
+.eb.on,
+.nb.on {
+  background-color: #000;
+  color: #fff;
+}
+
+.bg-cloud {
+  position: absolute;
+	top: 0;
+	left: 0;
+	opacity: .8;
+	animation: move1 100s linear infinite;
+	z-index: 1;
+}
+
+.bg-cloud2 {
+  position: absolute;
+	top: 20px;
+	left: 0;
+	opacity: .8;
+	animation: move2 100s linear infinite;
+	z-index: 1;
+}
+
+.p-cloud {
+  position: absolute;
+  top: 193px;
+  left: 377px;
+  width: 512px;
+  height: 290px;
+  overflow: hidden;
+}
+
+.p-cloud img:first-child {
+  position: absolute;
+  top: 0px;
+  left: 59px;
+  width: 480px;
+  height: 160px;
+  opacity: .8;
+	animation: pmove1 100s linear infinite;
+	z-index: 1;
+}
+
+.p-cloud img:nth-child(2) {
+  position: absolute;
+  top: 0px;
+  left: 59px;
+  width: 480px;
+  height: 160px;
+  opacity: .9;
+	animation: pmove2 100s linear infinite;
+	z-index: 1;
+}
+
+
+@keyframes move1 {
+	0% {
+		left: -100vw;
+	}
+	100% {
+		left: 100vw;
+	}
+}
+
+@keyframes move2 {
+	0% {
+		left: 0;
+	}
+	50% {
+		left: 1960px;
+		opacity: 0;
+	}
+	60% {
+		left: -1840px;
+		opacity: 0.8;
+	}
+	100%{
+		left: 0;
+	}
+}
+
+@keyframes pmove1 {
+	0% {
+		left: -512px;
+	}
+	100% {
+		left: 512px;
+	}
+}
+
+@keyframes pmove2 {
+	0% {
+		left: 0;
+	}
+	50% {
+		left: 512px;
+		opacity: 0;
+	}
+	60% {
+		left: 512px;
+		opacity: 0.8;
+	}
+	100%{
+		left: 0;
+	}
+}
